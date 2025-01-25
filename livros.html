@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca Virtual</title>
+    <link rel="stylesheet" href="livros.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Grade (Grid Pai)  -->
+      <div class="cabecalhoitem">
+        <h1 class="cabecalho">Biblioteca Virtual</h1>
+      </div>
+      
+      <div class="secaoLivros">
+        <!-- Seção de livros (Esquerda) -->
+        <h3 class="itemLivros">Livros</h3>
+        <h3 id="incluirLivro" class="itemLivros2">Incluir</h3>
+        <h3 id="consultarLivro" class="itemLivros2">Consultar</h3>
+
+      </div>
+
+      <div class="bodyIncluir">
+        <!-- "Incluir" (Direita) -->
+        <h2>Cadastro de livros</h2><br>
+        <hr ><br>
+        <div class="incluir">
+          <div class="incluir2">
+            <div class="incluiritem"><label for="isbn">ISBN: </label></div>
+            <div class="incluiritem"><label for="titulo">Título: </label></div>
+            <div class="incluiritem"><label for="autores">Autor(es): </label></div>
+            <div class="incluiritem"><label for="editora">Editora: </label></div>
+            <div class="incluiritem"><label for="ano">Ano: </label></div>
+            <div class="incluiritem"><label for="area">Área: </label></div>
+          </div>
+          <div id="inputsIncluir">
+            <input class="inputitem" type="number" id="isbn" min="11111" max="99999" size="15"> 
+            <span class="erro" id="valisbn">ISBN deve ser um número de 11111 a 99999</span>
+            <span class="erro" id="valisbn2">ISBN já existente no sistema, insira um ISBN válido!</span><br>
+            <input class="inputitem" type="text" id="titulo" minlength="4" size="70"> 
+            <span class="erro" id="valtitulo">Título deve ter pelo menos 4 caracteres!</span><br>
+            <input class="inputitem" type="text" id="autores" minlength="4" size="60"> 
+            <span class="erro" id="valautores">Autor deve ter pelo menos 4 caracteres</span><br>
+            <input class="inputitem" type="text" id="editora" minlength="4" size="45"> 
+            <span class="erro" id="valeditora">Editora deve ter pelo menos 4 caracteres!</span><br>
+            <input class="inputitem" type="number" id="ano" min="1970" size="10"> 
+            <span class="erro" id="valano">Ano deve ser menor ou igual ao ano atual</span><br>
+            <select id="area">
+              <option value="">--Selecione--</option>
+              <option value="computacao">Computação</option>
+              <option value="matematica">Matemática</option>
+              <option value="fisica">Física</option>
+              <option value="quimica">Química</option>
+              <option value="biologia">Biologia</option>
+              <option value="letras">Letras</option>
+            </select> 
+            <span class="erro" id="valarea">Selecione uma área</span><br>
+            <hr id="linha">
+            <button class="button" id="salvar">Salvar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bodyConsultar">
+        <!-- "Consultar" (Direita) -->
+        <h2 class="listalivros2">Lista de livros</h2>
+        <button class="btnConsulta" id="grid"><img src="grid.png" width="24"></button>
+        <button class="btnConsulta" id="list"><img src="list.png" width="24"></button><br><br>
+
+        <hr ><br>
+          
+          <div id="inputsConsulta">
+            <label for="areaConsulta" class="area">Área: </label>
+            <select id="areaConsulta" class="area">
+              <option value="todas">Todas</option>
+              <option value="computacao">Computação</option>
+              <option value="matematica">Matemática</option>
+              <option value="fisica">Física</option>
+              <option value="quimica">Química</option>
+              <option value="biologia">Biologia</option>
+              <option value="letras">Letras</option>
+            </select>
+            <h for="areaConsulta" id="qtdlivros">Nenhum livro encontrado</h>
+          </div>
+          <div class="livrosConsulta" id="livrosCONSUL" >
+            
+            <!-- Onde os livros serão mostrados -->
+          </div>
+        </div>
+      
+      <footer class="rodapeitem"><h4 class="rodape"></h4></footer>
+    </div>
+      
+ 
+    <script src="livros.js"></script>
+  </body>
+</html>
