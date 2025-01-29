@@ -25,4 +25,22 @@ HTML: Estrutura da página.
 CSS: Estilização e layout (Grid Layout).
 JavaScript: Lógica de programação e interação com o localStorage.
 
+Como Usar
+Clone o repositório:
+git clone https://github.com/seu-usuario/Biblioteca-Virtual.git
+Abra o arquivo livros.html no seu navegador.
 
+Cadastre Livros:
+Clique no botão "Incluir" e preencha o formulário com os dados do livro.
+
+Consulte Livros:
+Clique no botão "Consultar" para visualizar a lista de livros cadastrados.
+Use o filtro de área para exibir livros específicos.
+
+Exclua Livros:
+Clique no botão "Excluir" e confirme a exclusão do livro desejado.
+
+Estrutura do Projeto
+livros.html: Contém a estrutura HTML da página.
+livros.css: Contém os estilos CSS para a página.
+livros.js: Contém a lógica JavaScript para manipulação dos dados e interações.
